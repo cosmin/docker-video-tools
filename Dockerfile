@@ -14,9 +14,9 @@ RUN apt-get update -qq && apt-get upgrade -y && \
 
 ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-ADD opt/vmaf /opt/vmaf
-ADD opt/packager /opt/packager
-ADD opt/ffmpeg /opt/ffmpeg
+ADD output/vmaf /opt/vmaf
+ADD output/packager /opt/packager
+ADD output/ffmpeg /opt/ffmpeg
 
 ENV PATH /opt/ffmpeg/bin:/opt/vmaf/bin:/opt/packager/bin:$PATH
 RUN ln -s /usr/local/cuda/lib64/stubs/libcuda.so /usr/local/cuda/lib64/stubs/libcuda.so.1
