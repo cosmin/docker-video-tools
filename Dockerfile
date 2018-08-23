@@ -14,7 +14,6 @@ RUN apt-get update -qq && apt-get upgrade -y && \
 
 ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-ADD output/vmaf /opt/vmaf
 ADD output/packager /opt/packager
 ADD output/ffmpeg /opt/ffmpeg
 
