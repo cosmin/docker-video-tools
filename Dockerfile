@@ -17,7 +17,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 ADD output/packager /opt/packager
 ADD output/ffmpeg /opt/ffmpeg
 
-ENV PATH /opt/ffmpeg/bin:/opt/vmaf/bin:/opt/packager/bin:$PATH
+ENV PATH /opt/ffmpeg/bin:/opt/packager/bin:$PATH
 RUN ln -s /usr/local/cuda/lib64/stubs/libcuda.so /usr/local/cuda/lib64/stubs/libcuda.so.1
 RUN echo "/usr/local/cuda/lib64/stubs" > /etc/ld.so.conf.d/zz_cuda_stubs.conf
 RUN ldconfig
