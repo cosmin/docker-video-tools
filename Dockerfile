@@ -20,4 +20,5 @@ ADD output/ffmpeg /opt/ffmpeg
 ENV PATH /opt/ffmpeg/bin:/opt/packager/bin:$PATH
 RUN ln -s /usr/local/cuda/lib64/stubs/libcuda.so /usr/local/cuda/lib64/stubs/libcuda.so.1
 RUN echo "/usr/local/cuda/lib64/stubs" > /etc/ld.so.conf.d/zz_cuda_stubs.conf
+RUN ln -s /opt/ffmpeg/share/model /usr/local/share/
 RUN ldconfig
