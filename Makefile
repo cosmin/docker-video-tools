@@ -7,9 +7,9 @@ clean:
 
 .PHONY: docker
 docker: 
-	docker build -t video-tools:latest .
+	docker build -t video-tools:stable .
 
 .PHONY: push
 push: docker
-	docker tag video-tools:latest offbytwo/video-tools:latest
-	docker push offbytwo/video-tools:latest
+	docker tag video-tools:stable offbytwo/video-tools:stable
+	docker push offbytwo/video-tools:stable
