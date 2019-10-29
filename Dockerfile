@@ -9,6 +9,7 @@ RUN apt-get update -qq && apt-get upgrade -y && \
     apt-get -y install --no-install-recommends \
     libnuma1 \
     libssl1.1 \
+    gpac \
     libfreetype6 \
     && apt-get -y clean && rm -r /var/lib/apt/lists/*
 
